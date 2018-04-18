@@ -1,0 +1,95 @@
+
+<body>
+<ul class="m-menu">
+	<li class="close-menu"><a href="#"><i class="far fa-window-close"></i></a></li>
+	<li><a href="#" class="menu-link">Home</a></li>
+	<li><a href="#about" class="menu-link">About</a></li>
+	<li><a href="#services" class="menu-link">Services</a></li>
+	<li><a href="#work" class="menu-link">Portfolio</a></li>
+	<li><a href="#testimonials" class="menu-link">Testimonials</a></li>
+	<li><a href="#contact" class="menu-link">Contact</a></li>
+</ul>
+
+	<header class="header" id="header">
+		<div class="container">
+			<div class="header__logo wow fadeInUp">
+				<h4 class="logo"><a href="#">Mycompany</a></h4>
+				<a href="#" class="m-menu-link"><i class="fas fa-bars"></i></a>
+				<ul class="visible-lg">
+					<li><a href="#" class="menu-link">Home</a></li>
+					<li><a href="#about" class="menu-link">About</a></li>
+					<li><a href="#services" class="menu-link">Services</a></li>
+					<li><a href="#work" class="menu-link">Portfolio</a></li>
+					<li><a href="#testimonials" class="menu-link">Testimonials</a></li>
+					<li><a href="#contact" class="menu-link">Contact</a></li>
+				</ul>
+			</div>
+			<div class="header__text wow fadeInUp">
+				<h1 class="header__title">Welcome on <span>Mycompany</span></h1>
+				<p class="header__discript">We are a digital agency with <span>years of experience</span> and with <span>extraordinary people</span></p>
+			</div>
+		</div>
+	</header>
+	</body>
+
+
+.m-menu-link {
+	display: none;
+	color: #ffffff;
+	font-size: 25px;
+}
+.m-menu {
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	list-style: none;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 3;
+	background-color: #000;
+	opacity: 0.9;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: 0.2s;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+}
+.m-menu__active {
+	transform: translateX(0%);
+}
+
+.close-menu {
+	position: fixed;
+	top: 5px;
+	right: 29px;
+	font-size: 35px;
+}
+.close-menu a {
+	color: #ffffff;
+}
+
+
+$(function() {
+    var link = $('.m-menu-link');
+    var close = $('.close-menu');
+    var menu = $('.m-menu');
+    link.on('click', function(event) {
+        event.preventDefault();
+        menu.toggleClass('m-menu__active')
+    });
+    close.on('click', function(event) {
+        event.preventDefault();
+        menu.toggleClass('m-menu__active')
+    });
+});
