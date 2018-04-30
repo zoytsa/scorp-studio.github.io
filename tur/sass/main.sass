@@ -1,0 +1,197 @@
+@import "fonts"
+
+/* specification*/
+$default-font: "Exo2" , sans-serif
+$accent: orange
+$text: #fff
+$bgc: #141731
+$hover: #8c88d7
+
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+  text-decoration: none
+  list-style-type: none
+
+body
+	background-color: $bgc
+	font-size: 16px
+	line-height: 1.65
+	font-family: $default-font
+	color: $text
+
+.container
+	width: 90%
+	margin: 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+ul, li
+	list-style: none
+	display: block
+	margin: 0
+	padding: 0
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+p
+	margin: 0
+	padding: 0
+
+/*Header section*/
+.header
+	background-image: url(../img/head-bg.png)
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: 100% auto
+	
+	
+	padding-top: 50px
+.head
+	display: flex
+	justify-content: space-between	
+	align-items: center
+.head__left
+	display: flex
+
+.head__right
+	display: flex
+	
+.logo
+	margin-right: 115px
+ &__item
+  width: 145px
+	height: 19px
+
+.menu
+	display: flex	
+
+	&__item
+	 margin-right: 35px	
+	 font-size: 12px
+	 font-weight: 400
+	a
+		color: $text
+		text-decoration: none
+	a:hover
+		font-size: 12px
+		text-decoration: underline	
+		color: $hover
+
+.head__phone
+	display: flex
+	font-size: 13px
+	color: $text
+	font-weight: 800
+	margin-right: 50px
+	align-items: center
+.phone__number
+
+	margin-left: 10px
+.order__call
+	
+	a
+		font-size: 12px
+		color: #9150f2
+		text-decoration: none
+		border-radius: 30px
+		border: 1px solid #9150f2
+		padding: 10px 30px
+		font-weight: 800
+
+	a:hover
+		background-color: $hover	
+		color: $text
+
+
+.titleblock
+	width: 85%
+	margin: 0 auto
+	margin-top: 150px
+	&__title
+		font-size: 45px
+		font-weight: 800
+	&__text
+		font-size: 37px
+		color: $text	
+		font-weight: 500
+	&__btn
+		display: inline-block
+		font-size: 17px
+		color: $text	
+		font-weight: 800
+		background-color: $hover
+		border-radius: 30px
+		border: 1px solid $hover
+		padding: 10px 30px 
+		margin-top: 20px
+	&__btn:hover
+		font-size: 17px
+		color: #9150f2
+		text-decoration: none
+		border-radius: 30px
+		border: 1px solid $bgc
+		padding: 10px 30px	
+		background-color: $bgc
+
+.sliderblock
+	margin: 170px 0
+	height: 100%
+	border: 1px solid #000	
+	&__content
+		display: inline-block
+		width: 280px
+		height: 421px
+	&__images img
+		width: 280px
+		height: 205px	
+	&__title
+		font-size: 15px
+		font-weight: 800
+		color: #8c88d7
+	&__title a
+		color: #8c88d7
+		text-decoration: none
+	&__text
+		display: flex
+		position: relative
+	&__link
+		width: 280px
+		display: inline-block
+		background-color: #212048	
+		border-radius: 5px
+		border-buttom: 1px solid #201f48
+		padding: 30px 0 0 30px
+	&__discript
+		margin-top: 5px
+		margin-bottom: 35px	
+		margin-right: 20px
+		font-size: 13px
+		font-weight: 500
+		color: #0986c1
+	&__icon	
+		color: #0986c1
+	&__star
+		position: absolute
+		top: -78px
+		right: 43px
+		background-color: #b434f2
+		color: #e1a2ff
+		border-radius: 100px
+		border: 1px solid #b434f2
+		padding: 15px 15px
+		font-size: 13px
+.sliderblock__content:nth-child(2n+5)
+	transform: translateY(50px)
+.sliderblock__content:nth-child(3n+6)
+	transform: translateY(100px)	
+.sliderblock__content:nth-child(4n)
+		
+		
