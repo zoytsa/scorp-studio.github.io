@@ -6,7 +6,7 @@ $accent: orange
 $text: #fff
 $bgc: #141731
 $hover: #8c88d7
-
+$title: #d8d6f1	
 *
   box-sizing: border-box
   padding: 0
@@ -50,9 +50,7 @@ p
 	background-image: url(../img/head-bg.png)
 	background-repeat: no-repeat
 	background-position: top center
-	background-size: 100% auto
-	
-	
+	background-size: cover
 	padding-top: 50px
 .head
 	display: flex
@@ -93,7 +91,6 @@ p
 	margin-right: 50px
 	align-items: center
 .phone__number
-
 	margin-left: 10px
 .order__call
 	
@@ -105,10 +102,12 @@ p
 		border: 1px solid #9150f2
 		padding: 10px 30px
 		font-weight: 800
-
+		box-shadow: 0 0 10px rgba(0,0,0,0.3)
+		transition: all 0.5s ease
 	a:hover
 		background-color: $hover	
 		color: $text
+		box-shadow: 0 0 10px rgba(0,0,0,0.3)
 
 
 .titleblock
@@ -132,6 +131,7 @@ p
 		border: 1px solid $hover
 		padding: 10px 30px 
 		margin-top: 20px
+		box-shadow: 0 0 10px rgba(0,0,0,0.7)
 	&__btn:hover
 		font-size: 17px
 		color: #9150f2
@@ -140,24 +140,109 @@ p
 		border: 1px solid $bgc
 		padding: 10px 30px	
 		background-color: $bgc
+		box-shadow: 0 0 10px rgba(0,0,0,0.7)
+		transition: all 0.5s ease
+.slidersection
+	width: 100%
+	margin: 0 auto
+	margin-top: 190px
+	display: flex
+	justify-content: flex-end
+	
+	&__hits
+		width: 300px
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		margin-top: 100px
+		
+	&__sale
+		font-size: 16px
+		font-weight: 500
+		color: #bc78dd	
+	&__title
+		font-size: 20px
+		color: #d8d6f1
+		font-weight: 800	
+		margin-top: 20px
+.slider-icons-l::before, .slider-icons-r::before
+    color: #ffffff
+    font-size: 24px
+    cursor: pointer
+    z-index: 9999
+.slider-icons-l::before,
+    position: absolute
+    bottom: 80px
+    right: -15px
+    z-index: 9999
+.slider-icons-r::before 
+    position: absolute
+    bottom: 80px
+    right: -103px
+    z-index: 9999
+.slick-prev::before, .slick-next::before 
+    color: #ffffff
+    font-size: 24px
+    background-color: #000000
+    display: inline-block
+    padding: 10px
+
+.slick-prev::before 
+    content: '<'
+		
+.slick-next::before 
+    content: '>'
+    position: absolute
+    bottom: 0
+    right: -135px
+.slick-dots 
+    position: absolute
+    bottom: 76px
+    right: -105px
+    display: block
+    width: 10%
+    padding: 0
+    margin: 0
+    list-style: none
+    text-align: center
+    z-index: 999
+
+.slick-dots li 
+    position: relative
+    display: inline-block
+    margin: 0
+    padding: 0
+    cursor: pointer
+.slick-dots li button:before 
+    content: ''
+    width: 12px
+    height: 8px
+    background:#2e2e43
+    opacity: 1
+    border-radius: 20px
+
+.slick-dots li.slick-active button:before 
+    background: #fff
 
 .sliderblock
-	margin: 170px 0
-	height: 100%
-	border: 1px solid #000	
+	width: 950px
 	&__content
 		display: inline-block
-		width: 280px
+		width: 283px 
 		height: 421px
+		outline: 0
+
 	&__images img
 		width: 280px
 		height: 205px	
+		border-radius: 10px 10px 0 0
 	&__title
 		font-size: 15px
 		font-weight: 800
 		color: #8c88d7
 	&__title a
-		color: #8c88d7
+		color: $hover
 		text-decoration: none
 	&__text
 		display: flex
@@ -166,8 +251,8 @@ p
 		width: 280px
 		display: inline-block
 		background-color: #212048	
-		border-radius: 5px
-		border-buttom: 1px solid #201f48
+		border-radius: 0 0 5px 5px
+		
 		padding: 30px 0 0 30px
 	&__discript
 		margin-top: 5px
@@ -188,10 +273,99 @@ p
 		border: 1px solid #b434f2
 		padding: 15px 15px
 		font-size: 13px
-.sliderblock__content:nth-child(2n+5)
-	transform: translateY(50px)
-.sliderblock__content:nth-child(3n+6)
-	transform: translateY(100px)	
-.sliderblock__content:nth-child(4n)
+		box-shadow: 0 0 10px rgba(0,0,0,0.7)
+
+
+.sliderblock__content:nth-child(3n+2)
+	transform: translateY(50px)		
+.sliderblock__content:nth-child(3n)
+	transform: translateY(100px)		
 		
-		
+/*Info section*/		
+.info
+	background: url(../img/section-bg.png)
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+	&__position
+		width: 100%
+		display: flex
+		justify-content: flex-end 
+
+	&__content
+	 	width: 650px	
+	 	height: 100vh	
+	 	display: flex
+	 	flex-wrap: wrap
+	 	align-content: center
+	&__block
+		width: 265px
+		margin-bottom: 50px
+		margin-left: 50px
+	&__title
+		color: $title
+		font-size: 15px
+		font-weight: 800
+	&__icon
+		color: #dfed6d
+		font-size: 8px
+		margin-right: 2px
+	&__text
+		color: $hover
+		font-size: 14px
+		font-weight: 400
+		margin-top: 20px
+
+/*Gallery section*/
+.gallery
+	padding-top: 70px
+	background: url(../img/sect-bg.png)
+	background-position: top center
+	background-size: cover
+	span
+		font-size: 16px
+		font-weight: 500
+		color: #bc78dd	
+ &__title
+		font-size: 23px
+		font-weight: 800
+		color: #d8d6f1
+		margin-top: 20px
+
+
+
+	/* ---- grid ---- */
+
+.grid 
+
+
+/* clear fix */
+.grid:after 
+  content: ''
+  display: block
+  clear: both
+
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item 
+  width: 23%
+  float: left
+
+.gutter-sizer
+	width: 10px
+.grid-item 
+	margin-bottom: 10px
+  float: left
+
+.grid-item img 
+  display: block
+  width: 100%
+	
+.box 
+  width: 273px
+  display: inline-block
+
+  
+
