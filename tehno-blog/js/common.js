@@ -3,7 +3,7 @@ $(function() {
 $(".slider").slick({
 
   // normal options...
-  infinite: false,
+  infinite: true,
   dots: false,
   arrows: true,
   slidesToShow: 1,
